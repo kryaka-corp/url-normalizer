@@ -1,0 +1,40 @@
+{
+    "name": "@kryaka/url-normalizer",
+    "version": "0.0.1",
+    "type": "module",
+    "repository": "https://github.com/kryaka-corp/url-normalizer",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "scripts": {
+        "build": "tsc && npm test",
+        "test": "npx vitest"
+    },
+    "files": [
+        "dist"
+    ],
+    "imports": {
+        "#*.mts": {
+            "development": "./src/*.mts",
+            "default": "./dist/*.mjs"
+        },
+        "#tests/*.mts": "./tests/*.mts"
+    },
+    "exports": {
+        ".": "./dist/index.mjs",
+        "./*.mjs": "./dist/*.mjs"
+    },
+    "simple-git-hooks": {
+        "pre-commit": "npm run build && git add dist/"
+    },
+    "dependencies": {
+        "normalize-url": "8.1.0"
+    },
+    "devDependencies": {
+        "@types/node": "24.3.3",
+        "simple-git-hooks": "2.13.1",
+        "typescript": "5.9.2",
+        "vite": "7.1.5",
+        "vitest": "3.2.4"
+    }
+}

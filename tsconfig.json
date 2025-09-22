@@ -1,0 +1,56 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "types": [
+            "node"
+        ],
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "paths": {
+            "#*.mts": [
+                "./src/*.mts"
+            ],
+            "#tests/*.mts": [
+                "./tests/*.mts"
+            ]
+        },
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "declaration": true,
+        "emitBOM": false,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowImportingTsExtensions": true,
+        "rewriteRelativeImportExtensions": true,
+        "esModuleInterop": true,
+        "emitDeclarationOnly": false,
+        "preserveWatchOutput": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve"
+    },
+    "include": [
+        ".env.d.ts",
+        "types/**/*.d.ts",
+        "types/**/*.ts",
+        "types/**/*.d.ts",
+        "src/**/*.ts",
+        "src/**/*.mts",
+        "src/**/*.tsx"
+    ],
+    "exclude": [
+        ".next",
+        ".vercel",
+        "assets",
+        "certificates",
+        "credits",
+        "node_modules"
+    ]
+}
