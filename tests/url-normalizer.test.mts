@@ -1,5 +1,4 @@
 import {describe, it, expect} from 'vitest';
-
 import {urlNormalizer, isLocalhost} from '#index.mts';
 
 describe('isLocalhost', () => {

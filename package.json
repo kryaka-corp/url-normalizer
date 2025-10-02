@@ -1,10 +1,10 @@
 {
-    "name": "@kryaka/url-normalizer",
+    "name": "@dozora/url-normalizer",
     "version": "0.0.1",
     "type": "module",
     "repository": "https://github.com/kryaka-corp/url-normalizer",
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
+        "registry": "https://nexus.internal.orhol.com/repository/dozora"
     },
     "scripts": {
         "build": "tsc && npm test",
