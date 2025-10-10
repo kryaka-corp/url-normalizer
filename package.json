@@ -1,31 +1,27 @@
 {
     "name": "@dozora/url-normalizer",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "type": "module",
-    "repository": "https://github.com/kryaka-corp/url-normalizer",
-    "publishConfig": {
-        "registry": "https://nexus.internal.orhol.com/repository/dozora"
-    },
     "scripts": {
         "build": "tsc && npm test",
-        "test": "npx vitest"
+        "prepublishOnly": "npm run build",
+        "test": "npx vitest run"
     },
     "files": [
         "dist"
     ],
     "imports": {
-        "#*.mts": {
-            "development": "./src/*.mts",
-            "default": "./dist/*.mjs"
-        },
-        "#tests/*.mts": "./tests/*.mts"
+        "#*.ts": {
+            "@dozora/url-normalizer": "./src/*.ts",
+            "default": "./dist/*.js"
+        }
     },
     "exports": {
-        ".": "./dist/index.mjs",
-        "./*.mjs": "./dist/*.mjs"
+        ".": "./dist/index.js",
+        "./*": "./dist/*"
     },
     "simple-git-hooks": {
-        "pre-commit": "npm run build && git add dist/"
+        "pre-commit": "npm test"
     },
     "dependencies": {
         "normalize-url": "8.1.0"
@@ -34,7 +30,6 @@
         "@types/node": "24.3.3",
         "simple-git-hooks": "2.13.1",
         "typescript": "5.9.2",
-        "vite": "7.1.5",
         "vitest": "3.2.4"
     }
 }

@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import {urlNormalizer, isLocalhost} from '#index.mts';
+import {urlNormalizer, isLocalhost} from '#index.ts';
 
 describe('isLocalhost', () => {
     it('Should return true for localhost without port', () => {

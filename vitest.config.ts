@@ -7,23 +7,29 @@ const cwd = process.cwd();
 const MAX_TEST_DURATION = (60 * 1_000) * 2;
 
 const config = defineConfig({
-    resolve: {
-        conditions: ['development']
+    ssr: {
+        resolve: {
+            conditions: ['@dozora/url-normalizer']
+        },
     },
     test: {
         environment: 'node',
         silent: false,
         testTimeout: MAX_TEST_DURATION,
         disableConsoleIntercept: true,
-        // ui: true,
-        // reporters: ['html'],
-
         include: [
-            'tests/**/*.test.{ts,mts}',
+            '**/*.test.{js,ts,mts}',
         ],
-
+        poolOptions: {
+            forks: {
+                execArgv: [
+                    '--harmony-temporal',
+                    '--experimental-transform-types'
+                ]
+            }
+        },
         env: loadEnv('', cwd, '')
     }
 });
 
-export default config
+export default config;
