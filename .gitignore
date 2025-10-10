@@ -11,6 +11,7 @@
 *.swp
 *.pid
 .DS_Store
+nohup.out
 
 # --------------------------
 # Git
@@ -35,16 +36,6 @@ npm-debug.log
 .idea
 .idea_modules/
 
-.next
 /logs
-
-#*.js
-*.js.map
-#*.d.ts
-#!/types/*.d.ts
-#/dist
+/dist
 tsconfig.tsbuildinfo
-
-certificates
-nohup.out
-.vercel
