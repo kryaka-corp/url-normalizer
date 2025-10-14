@@ -2,9 +2,10 @@
     "name": "@dozora/url-normalizer",
     "version": "1.0.0",
     "type": "module",
+    "author": "Dozora, Inc.",
     "scripts": {
-        "build": "tsc && npm test",
-        "prepublishOnly": "npm run build",
+        "build": "tsc",
+        "prepublishOnly": "npm run build && npm test",
         "test": "vitest run"
     },
     "files": [
