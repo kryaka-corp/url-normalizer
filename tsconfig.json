@@ -12,11 +12,8 @@
             "esnext"
         ],
         "paths": {
-            "#*.mts": [
-                "./src/*.mts"
-            ],
-            "#tests/*.mts": [
-                "./tests/*.mts"
+            "#*.ts": [
+                "./src/*.ts"
             ]
         },
         "rootDir": "./src",
@@ -46,11 +43,9 @@
         "src/**/*.tsx"
     ],
     "exclude": [
-        ".next",
-        ".vercel",
-        "assets",
-        "certificates",
-        "credits",
+        "**/*.test.js",
+        "**/*.test.ts",
+        "**/*.test.mts",
         "node_modules"
     ]
 }
