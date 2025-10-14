@@ -1,7 +1,6 @@
 {
     "name": "@dozora/url-normalizer",
     "version": "1.0.0",
-    "type": "module",
     "author": "Dozora, Inc.",
     "scripts": {
         "build": "tsc",
